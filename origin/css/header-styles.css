@@ -1,0 +1,56 @@
+/*Fluid design by Trys Mudford*/
+/* @link https://utopia.fyi */
+/* ********************************************* Header styles ********************************************* */
+.header {
+    background-color: var(--dark-color);
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-container__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header-container__a {
+    color: var(--light-color);
+    margin: 0.45rem;
+    font-family: "Figtree", "Tahoma";
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-container__btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--dark-color);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header-container__img {
+        width: 1rem;
+        height: 1rem;
+}
+
+/* ********************************************* Pseudo classes ********************************************* */
+.header-container__a:hover {
+    color: var(--bg-light-color);
+}
+
+.header-container__btn:hover {
+    background-color: var(--light-color);
+}

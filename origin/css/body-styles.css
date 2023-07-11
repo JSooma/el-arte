@@ -1,0 +1,179 @@
+/*Fluid design by Trys Mudford*/
+/* @link https://utopia.fyi */
+
+/* ********************************************* Custom properties ********************************************* */
+:root {
+    --dark-color: #222;
+    --light-color: #fefefe;
+    --bg-light-color: #fbe4ae;
+    --bg-dark-color: #111;
+    --pi-light-color: #f4dba3;
+}
+
+/* ********************************************* Font size fluid design ********************************************* */
+html {
+    font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1400 - 300)));
+    scroll-behavior: smooth;
+}
+
+/* ********************************************* User preferences ********************************************* */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: var(--bg-light-color);
+        --txt-color: var(--dark-color);
+        --border: var(--dark-color);
+        --post-it-color: var(--pi-light-color);
+    }
+}
+
+:root.light {
+    --bg-color: var(--bg-light-color);
+    --txt-color: var(--dark-color);
+    --border: var(--dark-color);
+    --post-it-color: var(--pi-light-color);
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: var(--bg-dark-color);
+        --txt-color: var(--light-color);
+        --border: var(--light-color);
+        --post-it-color: var(--dark-color);
+    }
+}
+
+:root.dark {
+    --bg-color: var(--bg-dark-color);
+    --txt-color: var(--light-color);
+    --border: var(--light-color);
+    --post-it-color: var(--dark-color);
+}
+/* ********************************************* Fonts ********************************************* */
+@font-face {
+    font-family: "Figtree";
+    src: url(../fonts/Figtree.ttf);
+}
+
+/* ********************************************* Body styles ********************************************* */
+body {
+    background-color: var(--bg-color);
+}
+
+.container {
+    animation: visible 1.5s ease-in-out;
+}
+
+.main-container {
+    padding: 2rem;
+}
+
+/* ********************************************* Shared styles ********************************************* */
+.presentation,
+.art,
+.arts,
+.artist,
+.me,
+.phrase {
+    margin-top: 2rem;
+    background-color: var(--post-it-color);
+}
+
+.presentation-container,
+.art-container,
+.arts-container,
+.artist-container,
+.me-container,
+.phrase-container {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+}
+
+.presentation-container__h1,
+.art-container__h2,
+.art-container__p,
+.arts-container__h2,
+.arts-container__p,
+.arts-container__h4,
+.artist-container__h2,
+.artist-container__p,
+.me-container__h2,
+.me-container__p {
+    color: var(--txt-color);
+    font-family: "Figtree", "Tahoma";
+}
+
+.art-container__p,
+.arts-container__p,
+.arts-container__h4,
+.artist-container__p,
+.me-container__p {
+    margin-top: 1rem;
+}
+
+/* ********************************************* Presentation styles ********************************************* */
+.presentation-container__h1,
+.presentation-container__p {
+    text-align: center;
+}
+
+.presentation-container__spam {
+    display: block;
+    margin: auto;
+    width: 8ch;
+    border-right: 1px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(9),
+    blink 0.5s infinite step-end alternate;
+}
+
+.presentation-container__img {
+    border-radius: 10px;
+    margin: auto;
+
+}
+
+/* ********************************************* Phrase styles ********************************************* */
+.phrase-container__h2 {
+    color: var(--txt-color);
+    font-family: "Figtree", "Tahoma";
+    text-align: center;
+}
+
+/* ********************************************* Animations ********************************************* */
+@keyframes typing {
+    from { /* Cuando inicia  aplica un width 0% */
+        width: 0%;
+    }
+}
+
+@keyframes blink {
+    50% { /* A mitad de la animación aplica color transparente al borde */
+        border-color: transparent;
+    }
+}
+
+@keyframes visible {
+    from {
+        opacity: 0;
+    }
+}
+
+/* ********************************************* Media queries ********************************************* */
+@media screen and (min-width: 30em) {
+    .presentation-container__img {
+        width: 60%;
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-container__a {
+        margin-left: 1rem;
+    }
+}
+
+

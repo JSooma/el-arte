@@ -1,0 +1,20 @@
+/*Fluid design by Trys Mudford*/
+/* @link https://utopia.fyi */
+
+/* ********************************************* Footer styles ********************************************* */
+.footer {
+    width: 100%;
+    background-color: var(--dark-color);
+    border-top: 1px solid var(--border);
+}
+
+.footer-container {
+    padding: 1rem;
+}
+
+.footer-container__p {
+    color: var(--light-color);
+    font-size: 0.9rem;
+    font-family: "Figtree", "Tahoma";
+    text-align: center;
+}
